@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Object Demo</title>
+</head>
+<body>
+
+    <h2>Math Object Example</h2>
+    <button onclick="mathDemo()">Run Program</button>
+
+    <script>
+        function mathDemo() {
+            // Math properties
+            console.log("Value of PI:", Math.PI);
+            console.log("Value of Euler's number (e):", Math.E);
+
+            let num = 4.7;
+            let num2 = -9;
+
+            // Math methods
+            console.log("Round:", Math.round(num));   // 5
+            console.log("Ceil:", Math.ceil(num));     // 5
+            console.log("Floor:", Math.floor(num));   // 4
+
+            console.log("Square root:", Math.sqrt(16)); // 4
+            console.log("Power:", Math.pow(2, 3));     // 8
+
+            console.log("Absolute value:", Math.abs(num2)); // 9
+
+            console.log("Maximum:", Math.max(10, 20, 5)); // 20
+            console.log("Minimum:", Math.min(10, 20, 5)); // 5
+
+            console.log("Random number:", Math.random());
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Object Demo</title>
+</head>
+<body>
+
+    <h2>User Defined Object Example</h2>
+    <button onclick="runDemo()">Run Program</button>
+
+    <script>
+        // Constructor function
+        function Person(name, age) {
+            // Properties
+            this.name = name;
+            this.age = age;
+
+            // Method
+            this.greet = function() {
+                return "Hello, my name is " + this.name;
+            };
+        }
+
+        function runDemo() {
+            // Creating object using constructor
+            let person1 = new Person("Sai", 21);
+
+            // Adding accessor (getter & setter)
+            Object.defineProperty(person1, "info", {
+                get: function() {
+                    return this.name + " is " + this.age + " years old";
+                },
+                set: function(value) {
+                    let parts = value.split(" ");
+                    this.name = parts[0];
+                    this.age = parseInt(parts[1]);
+                }
+            });
+
+            // Display properties
+            console.log("Name:", person1.name);
+            console.log("Age:", person1.age);
+
+            // Calling method
+            console.log(person1.greet());
+
+            // Using getter
+            console.log("Info (getter):", person1.info);
+
+            // Using setter
+            person1.info = "Ram 25";
+            console.log("Updated Info:", person1.info);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Object Demo</title>
+</head>
+<body>
+
+    <h2>Window Object Example</h2>
+
+    <button onclick="showInfo()">Show Window Info</button>
+    <button onclick="openNew()">Open New Window</button>
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        function showInfo() {
+            // Window properties
+            alert("Width: " + window.innerWidth + 
+                  "\nHeight: " + window.innerHeight);
+
+            console.log("URL:", window.location.href);
+        }
+
+        function openNew() {
+            // Window method to open a new window
+            window.open("https://www.google.com", "_blank", "width=500,height=500");
+        }
+
+        function goBack() {
+            // Window method to go back in history
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>

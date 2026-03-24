@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Object Demo</title>
+</head>
+<body>
+
+    <h2>Date Object Example</h2>
+    <button onclick="dateDemo()">Run Program</button>
+
+    <script>
+        function dateDemo() {
+            // Creating Date object
+            let now = new Date();
+
+            // Date methods (getting values)
+            console.log("Current Date:", now);
+            console.log("Year:", now.getFullYear());
+            console.log("Month (0-11):", now.getMonth());
+            console.log("Date:", now.getDate());
+            console.log("Day (0-6):", now.getDay());
+
+            console.log("Hours:", now.getHours());
+            console.log("Minutes:", now.getMinutes());
+            console.log("Seconds:", now.getSeconds());
+
+            // Setting values
+            now.setFullYear(2030);
+            console.log("Updated Year:", now.getFullYear());
+
+            // Converting date to string
+            console.log("Date String:", now.toDateString());
+            console.log("Time String:", now.toTimeString());
+
+            // Get timestamp
+            console.log("Milliseconds since Jan 1, 1970:", now.getTime());
+        }
+    </script>
+
+</body>
+</html>

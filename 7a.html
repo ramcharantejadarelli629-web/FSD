@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object Demo</title>
+</head>
+<body>
+
+    <h1 id="title">Hello World</h1>
+    <p>This is a paragraph.</p>
+
+    <button onclick="changeContent()">Click Me</button>
+
+    <script>
+        function changeContent() {
+            // Using document property
+            console.log("Page Title:", document.title);
+
+            // Using document method: getElementById
+            let heading = document.getElementById("title");
+
+            // Changing content
+            heading.innerHTML = "Content Changed!";
+
+            // Using document method: getElementsByTagName
+            let paragraphs = document.getElementsByTagName("p");
+            paragraphs[0].style.color = "blue";
+
+            // Using document property: body
+            document.body.style.backgroundColor = "lightyellow";
+        }
+    </script>
+
+</body>
+</html>

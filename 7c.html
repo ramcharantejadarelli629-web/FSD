@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Object Demo</title>
+</head>
+<body>
+
+    <h2>Array Object Example</h2>
+    <button onclick="arrayDemo()">Run Program</button>
+
+    <script>
+        function arrayDemo() {
+            // Creating an array
+            let fruits = ["Apple", "Banana", "Mango"];
+
+            // Array property
+            console.log("Length of array:", fruits.length);
+
+            // Array methods
+            fruits.push("Orange");   // Add element at end
+            console.log("After push:", fruits);
+
+            fruits.pop();            // Remove last element
+            console.log("After pop:", fruits);
+
+            fruits.unshift("Grapes"); // Add element at beginning
+            console.log("After unshift:", fruits);
+
+            fruits.shift();           // Remove first element
+            console.log("After shift:", fruits);
+
+            // Using map method
+            let upperFruits = fruits.map(function(item) {
+                return item.toUpperCase();
+            });
+            console.log("Uppercase fruits:", upperFruits);
+
+            // Using forEach method
+            fruits.forEach(function(item) {
+                console.log("Fruit:", item);
+            });
+
+            // Join method
+            console.log("Joined string:", fruits.join(" - "));
+        }
+    </script>
+
+</body>
+</html>

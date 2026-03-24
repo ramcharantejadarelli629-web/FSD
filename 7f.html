@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegExp Object Demo</title>
+</head>
+<body>
+
+    <h2>RegExp Object Example</h2>
+    <button onclick="regexDemo()">Run Program</button>
+
+    <script>
+        function regexDemo() {
+            let text = "Hello 123 JavaScript 456";
+
+            // Creating RegExp object
+            let pattern = /[0-9]+/g;
+
+            // RegExp property
+            console.log("Global flag:", pattern.global);
+            console.log("Ignore case:", pattern.ignoreCase);
+
+            // RegExp methods
+            // test() → checks if pattern exists
+            console.log("Test (numbers exist?):", pattern.test(text));
+
+            // exec() → returns matched result
+            let result = pattern.exec(text);
+            console.log("First match using exec():", result);
+
+            // String methods with regex
+            console.log("Match:", text.match(pattern)); // all matches
+
+            console.log("Search index:", text.search(pattern)); // first match index
+
+            console.log("Replace numbers with '#':",
+                        text.replace(pattern, "#"));
+
+            console.log("Split by space:", text.split(/\s/));
+        }
+    </script>
+
+</body>
+</html>

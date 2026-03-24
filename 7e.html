@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Object Demo</title>
+</head>
+<body>
+
+    <h2>String Object Example</h2>
+    <button onclick="stringDemo()">Run Program</button>
+
+    <script>
+        function stringDemo() {
+            // Creating a string
+            let text = "Hello JavaScript";
+
+            // String property
+            console.log("Length:", text.length);
+
+            // String methods
+            console.log("Uppercase:", text.toUpperCase());
+            console.log("Lowercase:", text.toLowerCase());
+
+            console.log("Character at index 1:", text.charAt(1));
+
+            console.log("Index of 'Java':", text.indexOf("Java"));
+
+            console.log("Substring (0 to 5):", text.substring(0, 5));
+
+            console.log("Replace 'JavaScript' with 'World':", 
+                        text.replace("JavaScript", "World"));
+
+            console.log("Includes 'Hello':", text.includes("Hello"));
+
+            // Splitting string into array
+            let words = text.split(" ");
+            console.log("Split into words:", words);
+
+            // Joining array back to string
+            console.log("Joined with '-':", words.join("-"));
+        }
+    </script>
+
+</body>
+</html>

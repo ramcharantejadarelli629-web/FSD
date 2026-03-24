@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Loop Example</title>
+</head>
+<body>
+
+<h2>Display Object Data</h2>
+
+<h3>Using for-in Loop</h3>
+<p id="forin"></p>
+
+<h3>Using forEach Loop</h3>
+<p id="foreach"></p>
+
+<h3>Using for-of Loop</h3>
+<p id="forof"></p>
+
+<script>
+let person = {
+    name: "Sai",
+    age: 20,
+    city: "Vijayawada"
+};
+
+// for-in loop
+let result1 = "";
+for (let key in person) {
+    result1 += key + " : " + person[key] + "<br>";
+}
+document.getElementById("forin").innerHTML = result1;
+
+// forEach loop
+let result2 = "";
+Object.keys(person).forEach(function(key) {
+    result2 += key + " : " + person[key] + "<br>";
+});
+document.getElementById("foreach").innerHTML = result2;
+
+// for-of loop
+let result3 = "";
+for (let key of Object.keys(person)) {
+    result3 += key + " : " + person[key] + "<br>";
+}
+document.getElementById("forof").innerHTML = result3;
+</script>
+
+</body>
+</html>

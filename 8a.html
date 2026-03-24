@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Largest Number</title>
+</head>
+<body>
+
+<h2>Find the Largest Number</h2>
+
+Enter first number:
+<input type="number" id="num1"><br><br>
+
+Enter second number:
+<input type="number" id="num2"><br><br>
+
+Enter third number:
+<input type="number" id="num3"><br><br>
+
+<button onclick="findLargest()">Find Result</button>
+
+<p id="result"></p>
+
+<script>
+function findLargest() {
+    let n1 = parseFloat(document.getElementById("num1").value);
+    let n2 = parseFloat(document.getElementById("num2").value);
+    let n3 = parseFloat(document.getElementById("num3").value);
+
+    if (n1 == n2 && n2 == n3) {
+        document.getElementById("result").innerHTML = "EQUAL NUMBERS";
+    }
+    else if (n1 >= n2 && n1 >= n3) {
+        document.getElementById("result").innerHTML = n1 + " LARGER NUMBER";
+    }
+    else if (n2 >= n1 && n2 >= n3) {
+        document.getElementById("result").innerHTML = n2 + " LARGER NUMBER";
+    }
+    else {
+        document.getElementById("result").innerHTML = n3 + " LARGER NUMBER";
+    }
+}
+</script>
+
+</body>
+</html>

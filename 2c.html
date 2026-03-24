@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+
+<h2 align="center">Student Registration Form</h2>
+
+<form align="center">	
+    <table border="1" cellpadding="8" align="center">
+        <!-- Name -->
+        <tr>
+            <td>Full Name</td>
+            <td><input type="text" name="fullname" placeholder="Enter your name" required></td>
+        </tr>
+
+        <!-- Password -->
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="password" required></td>
+        </tr>
+
+        <!-- Age / Number -->
+        <tr>
+            <td>Age</td>
+            <td><input type="number" name="age" min="1" max="100"></td>
+        </tr>
+
+        <!-- Date of Birth -->
+        <tr>
+            <td>Date of Birth</td>
+            <td><input type="date" name="dob"></td>
+        </tr>
+
+        <!-- Gender Radio Buttons -->
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
+            </td>
+        </tr>
+
+        <!-- Checkboxes -->
+        <tr>
+            <td>Hobbies</td>
+            <td>
+                <input type="checkbox" name="hobby" value="sports"> Sports
+                <input type="checkbox" name="hobby" value="music"> Music
+                <input type="checkbox" name="hobby" value="reading"> Reading
+            </td>
+        </tr>
+
+        <!-- Select / List Box -->
+        <tr>
+            <td>Department</td>
+            <td>
+                <select name="department">
+                    <option value="cse">CSE</option>
+                    <option value="ece">ECE</option>
+                    <option value="eee">EEE</option>
+                    <option value="cic">CIC</option>
+                    <option value="csm">CSM</option>
+                    <option value="cso">CSO</option>
+                    <option value="mech">Mechanical</option>
+                    <option value="civil">Civil</option>
+                </select>
+            </td>
+        </tr>
+
+        <!-- Textarea -->
+        <tr>
+            <td>Address</td>
+            <td><textarea name="address" rows="4" cols="30"></textarea></td>
+        </tr>
+
+        <!-- Buttons -->
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>

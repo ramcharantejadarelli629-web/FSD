@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Denomination</title>
+</head>
+<body>
+
+<h2>Bank Denomination Calculator</h2>
+
+Enter Amount: 
+<input type="number" id="amount">
+<button onclick="calculate()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+function calculate() {
+    let amount = parseInt(document.getElementById("amount").value);
+    let result = "";
+
+    let n100 = Math.floor(amount / 100);
+    amount = amount % 100;
+
+    let n50 = Math.floor(amount / 50);
+    amount = amount % 50;
+
+    let n20 = Math.floor(amount / 20);
+    amount = amount % 20;
+
+    let n10 = Math.floor(amount / 10);
+    amount = amount % 10;
+
+    let n5 = Math.floor(amount / 5);
+    amount = amount % 5;
+
+    let n2 = Math.floor(amount / 2);
+    amount = amount % 2;
+
+    let n1 = amount;
+
+    result = 
+    "100's: " + n100 + "<br>" +
+    "50's: " + n50 + "<br>" +
+    "20's: " + n20 + "<br>" +
+    "10's: " + n10 + "<br>" +
+    "5's: " + n5 + "<br>" +
+    "2's: " + n2 + "<br>" +
+    "1's: " + n1;
+
+    document.getElementById("result").innerHTML = result;
+}
+</script>
+
+</body>
+</html>
